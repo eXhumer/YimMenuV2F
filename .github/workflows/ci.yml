@@ -49,7 +49,7 @@ jobs:
       - name: Check versions
         run: |
           cmake --version
-          ninja-build --version
+          ninja --version
           zig --version
 
       - name: Generate CMake project
