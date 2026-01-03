@@ -46,10 +46,7 @@ jobs:
       - name: Setup CMake and build tools
         run: |
           sudo apt update
-          sudo apt install -y cmake ninja-build
-
-      - name: Setup Zig
-        uses: mlugg/setup-zig@v2
+          sudo apt install -y cmake ninja-build zig
 
       - name: Generate CMake project
         run: cmake -DUSE_CROSSCOMPILER=Zig -DCMAKE_BUILD_TYPE=RelWithDebInfo -S . -B build -G Ninja
